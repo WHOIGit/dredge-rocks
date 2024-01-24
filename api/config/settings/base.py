@@ -80,6 +80,8 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    "sorl.thumbnail",
+    "django_cleanup.apps.CleanupConfig",
 ]
 
 LOCAL_APPS = ["dredge_core_rocks.users", "dredge_core_rocks.rocks"]
@@ -299,3 +301,5 @@ SPECTACULAR_SETTINGS = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+# SORL Thumbnail
+THUMBNAIL_FORCE_OVERWRITE = True

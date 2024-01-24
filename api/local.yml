@@ -34,18 +34,6 @@ services:
     env_file:
       - ./.envs/.local/.postgres
 
-  docs:
-    image: dredge_core_rocks_local_docs
-    container_name: dredge_core_rocks_local_docs
-    build:
-      context: .
-      dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.django
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./dredge_core_rocks:/app/dredge_core_rocks:z
-    ports:
-      - '9000:9000'
-    command: /start-docs
+  redis:
+    image: redis:6.2
+    restart: unless-stopped

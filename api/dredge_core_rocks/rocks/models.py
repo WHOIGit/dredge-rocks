@@ -1,4 +1,5 @@
 from django.db import models
+from sorl.thumbnail import ImageField
 
 
 class Cruise(models.Model):
@@ -50,7 +51,7 @@ class SamplePhoto(models.Model):
         related_name="sample_photos",
         on_delete=models.CASCADE,
     )
-    file = models.ImageField(upload_to="sample_photos")
+    file = ImageField(upload_to="sample_photos")
 
     def __str__(self):
         return f"Dredge {self.dredge.dredge_number} - Photo {self.file.name}"
