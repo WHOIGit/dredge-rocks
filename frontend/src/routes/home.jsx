@@ -1,26 +1,24 @@
-import * as React from "react";
-import Map, { NavigationControl } from "react-map-gl";
-import maplibregl from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
-// local import
-import MapMarkers from "../components/MapMarkers";
+import { Box, Typography } from "@mui/material";
+import Copyright from "../components/Copyright";
+import SamplesDataGrid from "../components/SamplesDataGrid";
 
 export default function Home() {
   return (
     <>
-      <Map
-        initialViewState={{
-          latitude: 17.3,
-          longitude: -87.5,
-          zoom: 2,
-        }}
-        mapLib={maplibregl}
-        style={{ height: "92vh", width: "100%" }}
-        mapStyle="https://api.maptiler.com/maps/satellite/style.json?key=TmZ9aal6ExudHs1hVtCW"
-      >
-        <NavigationControl />
-        <MapMarkers />
-      </Map>
+      <Box sx={{ p: 2 }}>
+        <Typography variant="h4" gutterBottom>
+          About Dredge Rocks
+        </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          Home text
+        </Typography>
+
+        <SamplesDataGrid />
+      </Box>
+      <Box sx={{ p: 2, textAlign: "center" }}>
+        <Copyright />
+      </Box>
     </>
   );
 }

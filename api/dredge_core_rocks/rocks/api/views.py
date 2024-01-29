@@ -9,5 +9,5 @@ class CruiseViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class SampleViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Sample.objects.all()
+    queryset = Sample.objects.all().prefetch_related("dredge", "dredge__leg", "dredge__leg__cruise")
     serializer_class = SampleSerializer

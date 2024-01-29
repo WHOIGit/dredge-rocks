@@ -70,7 +70,7 @@ class Sample(models.Model):
     texture = models.CharField(max_length=100, blank=True)
     contact = models.CharField(max_length=100, blank=True)
     glass = models.CharField(max_length=100, blank=True)
-    pelag = models.CharField(max_length=100, blank=True)
+    palag = models.CharField(max_length=100, blank=True)
     comments = models.CharField(max_length=100, blank=True)
     sampled_by = models.CharField(max_length=100, blank=True)
     sample_photo = models.ForeignKey(

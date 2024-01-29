@@ -17,10 +17,10 @@ class SamplePhotoSerializer(serializers.ModelSerializer):
         fields = ["file", "thumbnail"]
 
     def get_thumbnail(self, obj):
+        request = self.context.get("request", None)
         try:
             img = get_thumbnail(obj.file, "100x75", crop="center", quality=99)
-            print(img)
-            return img.url
+            return request.build_absolute_uri(img.url)
         except Exception as e:
             print(e)
             return None
@@ -37,6 +37,7 @@ class SampleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sample
         fields = [
+            "id",
             "ship",
             "cruise",
             "leg",
@@ -49,7 +50,7 @@ class SampleSerializer(serializers.ModelSerializer):
             "texture",
             "contact",
             "glass",
-            "pelag",
+            "palag",
             "comments",
             "sampled_by",
             "sample_photo",
