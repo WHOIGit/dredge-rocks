@@ -10,6 +10,7 @@ export default function Copyright() {
         bottom: 10,
         textAlign: "center",
         width: "100%",
+        mt: 4,
       }}
     >
       <Typography variant="body2" color="text.secondary" align="center">

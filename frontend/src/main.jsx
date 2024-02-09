@@ -13,6 +13,7 @@ import About from "./routes/about";
 import Layout from "./components/Layout";
 import ErrorPage from "./error-page";
 import Home from "./routes/home";
+import Sample from "./routes/sample";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "sample/:sampleId",
+        element: <Sample />,
       },
     ],
   },

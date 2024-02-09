@@ -6,18 +6,17 @@ export default function About() {
     <>
       <Box sx={{ p: 2 }}>
         <Typography variant="h4" gutterBottom>
-          About PaleoHurdat
+          About Dredge Rocks
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          PaleoHurdat is a project from the Woods Hole Oceanographic
-          Institution. It's purpose to make paleographic hurricane data
-          available to the public and scientific community via a map-based
-          interface.
-        </Typography>
-
-        <Typography variant="body1" gutterBottom>
-          Funding for this project is provided by the NSF.
+          Intro text here. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </Typography>
       </Box>
       <Box sx={{ p: 2, textAlign: "center" }}>
