@@ -82,6 +82,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
     "sorl.thumbnail",
     "django_cleanup.apps.CleanupConfig",
+    "django_filters",
 ]
 
 LOCAL_APPS = ["dredge_core_rocks.users", "dredge_core_rocks.rocks"]

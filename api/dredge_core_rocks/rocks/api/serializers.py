@@ -29,6 +29,7 @@ class SamplePhotoSerializer(serializers.ModelSerializer):
 class SampleSerializer(serializers.ModelSerializer):
     ship = serializers.SerializerMethodField()
     cruise = serializers.SerializerMethodField()
+    cruise_id = serializers.SerializerMethodField()
     dredge = serializers.SerializerMethodField()
     leg = serializers.SerializerMethodField()
 
@@ -40,6 +41,7 @@ class SampleSerializer(serializers.ModelSerializer):
             "id",
             "ship",
             "cruise",
+            "cruise_id",
             "leg",
             "dredge",
             "sample_number",
@@ -61,6 +63,9 @@ class SampleSerializer(serializers.ModelSerializer):
 
     def get_cruise(self, obj):
         return obj.dredge.leg.cruise.cruise_number
+
+    def get_cruise_id(self, obj):
+        return obj.dredge.leg.cruise.id
 
     def get_leg(self, obj):
         return obj.dredge.leg.leg_number

@@ -6,7 +6,7 @@ export default function Copyright() {
   return (
     <Box
       sx={{
-        position: "absolute",
+        position: "relative",
         bottom: 10,
         textAlign: "center",
         width: "100%",

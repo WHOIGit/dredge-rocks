@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import useSamples from "../hooks/useSamples";
 import SearchForm from "./SearchForm";
@@ -42,24 +42,73 @@ const columns = [
 ];
 
 export default function SamplesDataGrid() {
-  const [rows, setRows] = useState([]);
+  const [rows, setRows] = useState(null);
   const { data, isLoading, isError } = useSamples();
+  const [cruise, setCruise] = useState("");
+  const [dredge, setDredge] = useState("");
+  const [lithology, setLithology] = useState("");
+  const [texture, setTexture] = useState("");
   console.log(data);
 
   useEffect(() => {
-    setRows(data);
-  }, [data]);
+    // filter results by form inputs
+    if (data) {
+      // check if any filters are set
+      if (cruise || lithology || dredge || texture) {
+        console.log("filter set");
+        const newRows = data.results.filter((item) => {
+          let cruiseCheck = true;
+          let lithologyCheck = true;
+          let dredgeCheck = true;
+          let textureCheck = true;
 
-  if (isLoading || isError || !data) return null;
+          if (cruise) {
+            cruiseCheck = item.cruise_id === cruise;
+          }
+
+          if (lithology) {
+            lithologyCheck = item.primary_lithology === lithology;
+          }
+
+          if (dredge) {
+            dredgeCheck = item.dredge === dredge;
+          }
+
+          if (texture) {
+            textureCheck = item.texture === texture;
+          }
+
+          return cruiseCheck && lithologyCheck && dredgeCheck && textureCheck;
+        });
+
+        console.log("NEW DATA", newRows);
+        setRows(newRows);
+      } else {
+        setRows(data.results);
+      }
+    }
+  }, [data, cruise, lithology, dredge, texture]);
+
+  if (isLoading || isError || !data || !rows) return null;
 
   return (
     <>
-      <Box>
-        <SearchForm />
+      <Typography variant="body1">Filter Samples</Typography>
+      <Box sx={{ width: "50%" }}>
+        <SearchForm
+          cruise={cruise}
+          setCruise={setCruise}
+          lithology={lithology}
+          setLithology={setLithology}
+          dredge={dredge}
+          setDredge={setDredge}
+          texture={texture}
+          setTexture={setTexture}
+        />
       </Box>
       <Box>
         <DataGrid
-          rows={data}
+          rows={rows}
           columns={columns}
           rowHeight={75}
           initialState={{
