@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Box sx={{ p: 2 }}>
         <Typography variant="h4" gutterBottom>
-          Dredge Sample Rock Photos
+          Dredge Rock Sample Photos
         </Typography>
 
         <Typography variant="body2" gutterBottom>
