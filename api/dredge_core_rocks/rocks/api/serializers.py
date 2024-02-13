@@ -32,8 +32,8 @@ class SampleSerializer(serializers.ModelSerializer):
     cruise_id = serializers.SerializerMethodField()
     dredge = serializers.SerializerMethodField()
     leg = serializers.SerializerMethodField()
-
     sample_photo = SamplePhotoSerializer()
+    sample_photomicrograph = serializers.SerializerMethodField()
 
     class Meta:
         model = Sample
@@ -56,6 +56,7 @@ class SampleSerializer(serializers.ModelSerializer):
             "comments",
             "sampled_by",
             "sample_photo",
+            "sample_photomicrograph",
         ]
 
     def get_ship(self, obj):
@@ -72,3 +73,14 @@ class SampleSerializer(serializers.ModelSerializer):
 
     def get_dredge(self, obj):
         return obj.dredge.dredge_number
+
+    def get_sample_photomicrograph(self, obj):
+        request = self.context.get("request", None)
+        try:
+            thumb = get_thumbnail(obj.sample_photomicrograph.file, "100x75", crop="center", quality=99)
+            img_url = request.build_absolute_uri(obj.sample_photomicrograph.url)
+            thumb_url = request.build_absolute_uri(thumb.url)
+            return {"file": img_url, "thumbnail": thumb_url}
+        except Exception as e:
+            print(e)
+            return None
