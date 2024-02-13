@@ -76,6 +76,8 @@ class Sample(models.Model):
     sample_photo = models.ForeignKey(
         SamplePhoto, related_name="samples", on_delete=models.CASCADE, null=True, default=None
     )
+    # only one micrograph per sample
+    sample_photomicrograph = ImageField(upload_to="sample_photomicrographs", null=True)
 
     class Meta:
         ordering = ["dredge", "sample_number"]
