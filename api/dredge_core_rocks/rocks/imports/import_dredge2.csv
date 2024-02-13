@@ -1,0 +1,34 @@
+Ship,Cruise,Leg,Dredge,Sample #,Sub Sample,Primary Lithology,Ave grain size,Texture,Con-tact,Glass (mm),Palag. (mm),Comments,%,Ave. Size,%,Size (mm),%,Size (mm),%,Size (mm),%,Size (mm),%,Size (mm),Igneous Fabric,Crystal Plastic Fabric,Brittle,Weight (kg),Weath-ering,Angu-larity,Mn (mm),Total Alt.,% Plag.,% Olivine,% Pyrox.,Type,Size (mm),Volu-me %,Color,Halo,Comments,Sampled by
+Knr,210,5,2,1,,Pillow Basalt Breccia,10.00,Poorly Sorted,,,,"Unsorted breccia angular and rounded clasts of basalt 60%, 40% clay matrix",,,,,,,,,,,,,0.0,0.0,0.0,1.00,L,A,4.0,0,,,,,,,,,"Unsorted breccia angular and rounded clasts of basalt 60%, 40% clay matrix",
+Knr,210,5,2,1,a,Ol Pillow Basalt Clasts,0.01,Sparsely Phyric,,,,,0.1,0.1,,,2,1.3,,,,,,,0.0,0.0,0.0,,L,A,0.0,0,,,,,,,,,,
+Knr,210,5,2,2,,Pillow Basalt Breccia,5.00,Poorly Sorted,,,,"Unsorted breccia angular and rounded basalt clasts 70%, 30% pale brown clay",,,,,,,,,,,,,0.0,0.0,0.0,0.30,L,A,3.0,0,,,,,,,,,"Unsorted breccia angular and rounded basalt clasts 70%, 30% pale brown clay",
+Knr,210,5,2,2,a,Pillow Basalt Clasts,0.01,Aphyric,,,,,4,0.2,,,,,,,,,,,0.0,0.0,0.0,,L,A,0.0,0,,,,,,,,,,
+Knr,210,5,2,3,,Pillow Basalt Breccia,,,,,,,,,,,,,,,,,,,0.0,0.0,0.0,0.20,L,A,0.0,0,,,,,,,,,,
+Knr,210,5,2,4,,Pl-Ol Pillow Basalt,0.01,Phyric,,,,0.5 cm layer of basaltic breccia on  side.,8,1.0,10,2.0,4,0.5,,,,,,,0.0,0.0,0.0,0.50,L,A,1.0,0,,,,,,,,,0.5 cm layer of basaltic breccia on  side.,
+Knr,210,5,2,5,,Pl-Ol Pillow Basalt,0.01,Phyric,,,,,10,0.5,10,2.0,3,0.5,,,,,,,0.0,0.0,0.0,0.40,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,6,,Pl Pillow Basalt,0.1,Phyric,,,,,15,1.0,10,6,,,,,,,,,0.0,0.0,0.0,0.30,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,7,,Ol-Pl Pillow Basalt,0.10,Sparsely Phyric,,,,,8,0.5,0.5,0.5,1,0.3,,,,,,,0.0,0.0,0.0,0.20,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,8,,Pillow Basalt,0.01,Aphyric,,,,,12,0.5,,,,,,,,,,,0.0,0.0,0.0,0.30,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,9,,Ol-Pl Pillow Basalt,0.05,Sparsely Phyric,,,,Olivine and plagioclase glomerocrysts,15,0.1,0.5,1.0,1,0.5,,,,,,,0.0,0.0,0.0,0.10,L,A,0.1,0,,,,,,,,,Olivine and plagioclase glomerocrysts,
+Knr,210,5,2,10,,Pillow Basalt,0.10,Aphyric,,,,Vesicles filled with white minerals,8,0.2,,,,,,,,,,,0.0,0.0,0.0,2.10,L,A,0.1,0,,,,,,,,,Vesicles filled with white minerals,
+Knr,210,5,2,11,,Pillow Basalt,0.01,Aphyric,,,10.0,Contains clast with large plagioclase phenocryst,10,0.2,,,,,,,,,,,0.0,0.0,0.0,0.50,L,A,0.1,0,,,,,,,,,Contains clast with large plagioclase phenocryst,
+Knr,210,5,2,12,,Pillow Basalt,0.01,Aphyric,,,10.0,,3,0.2,,,,,,,,,,,0.0,0.0,0.0,1.90,L,A,0.1,0,,,,,,,,,,Vincent Salters glass
+Knr,210,5,2,13,,Pillow Basalt,0.01,Aphyric,,6.0,,,10,1.0,,,,,,,,,,,0.0,0.0,0.0,2.70,L,A,0.1,0,,,,,,,,,,Vincent Salters glass
+Knr,210,5,2,14,,Pl Pillow Basalt,0.01,Sparsely Phyric,,1.0,,,8,0.2,0.5,1.0,,,,,,,,,0.0,0.0,0.0,0.20,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,15,,Ol Pillow Basalt,0.01,Sparsely Phyric,,1.0,,Gabbroic xenolith 2 mm,10,1.0,,,0.5,0.5,,,,,,,0.0,0.0,0.0,0.50,L,A,0.1,0,,,,,,,,,Gabbroic xenolith 2 mm,
+Knr,210,5,2,16,,Ol Pillow Basalt,0.01,Sparsely Phyric,,,,,4,0.5,,,0.5,0.4,,,,,,,0.0,0.0,0.0,0.30,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,17,,Pl-Ol Pillow Basalt,0.01,Sparsely Phyric,,,,,3,0.3,0.5,0.5,0.2,0.4,,,,,,,0.0,0.0,0.0,0.50,L,A,2.0,0,,,,,,,,,,
+Knr,210,5,2,18,,Pillow Basalt,0.01,Aphyric,,,,,5,0.2,,,,,,,,,,,0.0,0.0,0.0,0.40,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,19,,Pillow Basalt,0.01,Aphyric,,,1.0,,2,0.1,,,,,,,,,,,0.0,0.0,0.0,8.40,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,20,,Pillow Basalt,0.01,Aphyric,,,,"Plagioclase glomerocryst.  Sample with white crystal mat o side, possibly sepiolite.",5,0.1,,,,,,,,,,,0.0,0.0,0.0,0.20,L,A,0.1,0,,,,,,,,,"Plagioclase glomerocryst.  Sample with white crystal mat o side, possibly sepiolite.",
+Knr,210,5,2,21,,Pl Pillow Basalt,0.01,Sparsely Phyric,,1.0,,,5,0.4,0.2,0.5,,,,,,,,,0.0,0.0,0.0,0.30,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,22,,Pillow Basalt,0.01,Aphyric,,1.0,,,2,0.5,,,,,,,,,,,0.0,0.0,0.0,0.90,L,A,0.1,0,,,,,,,,,,
+Knr,210,5,2,23,a,Peridotite,3.50,Porphyroclastic,Sed,,,,,,,,75,nd,0,na,22,3.5,1,0.2,0.0,2.0,0.0,10.50,M,A,1.0,80,,95% Serp,70% Serp,,,,,,,Henry Dick slab
+Knr,210,5,2,23,b,Polymict Breccia,3.00,nd,,,,"Matrix consists of carbonate, chrysotile, serpentine and talc.  Angular clasts of basalt, peridotite, serpentinite, soapstone, and basalt glass.",,,,,,,,,,,,,,,,0.50,,,,,,,,,,,,,"Matrix consists of carbonate, chrysotile, serpentine and talc.  Angular clasts of basalt, peridotite, serpentinite, soapstone, and basalt glass.",
+Knr,210,5,2,23,c,Basalt Clasts,0.01,Sparsely Phyric,,,,,5,0.3,1,2.0,,,,,,,,,0.0,0.0,0.0,nd,F,A,0.0,0,,,,,,,,,,
+Knr,210,5,2,23,d,Serpentinite Clasts,nd,nd,,,,,,,,,,,,,,,,,0.0,,,nd,,,,,,,,,,,,,,
+Knr,210,5,2,23,e,Glass Shards,Gl,Glassy,,,,Palagonite rims on glass shards in breccia.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Palagonite rims on glass shards in breccia.,
+Knr,210,5,2,23,f,Soapstone,nd,nd,,,,Piece of picrolite serpentine.,,,,,,,,,,,,,,,,,,,,100,,,,,,,,,Piece of picrolite serpentine.,
+Knr,210,5,2,24,,Harzburgite,nd,Porphyroclastic,,,,,,,,,,,0,,,,,,0.0,1.5,0.0,0.10,L,A,0.1,,,,,,,,,,,
+Knr,210,5,2,25,,Harzburgite,nd,Porphyroclastic,,,,,,,,,,,0,,,,,,0.0,1.5,1.0,0.10,L,A,0.1,98,,100 Serp,95 Serp,Chrysotile,0.1,1,white,0,,Henry Dick slab
+Knr,210,5,2,26,,Harzburgite,nd,Porphyroclastic,,,,,,,,,,,0,,20,nd,,,0.0,1.5,0.0,0.50,L,A,0.1,96,,99  Serp,90 Serp,Chrysotile,0.1,0.5,white,0,,Henry Dick slab

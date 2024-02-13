@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import useSWR from "swr";
-import Box from "@mui/material/Box";
+import { Box, Button, Stack } from "@mui/material";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Grid from "@mui/material/Unstable_Grid2";
+import DownloadIcon from "@mui/icons-material/Download";
+import ClearIcon from "@mui/icons-material/Clear";
 import { fetcher, API_BASE } from "../services/api";
 
 const apiCruisesUrl = `${API_BASE}/api/cruises/`;
@@ -50,7 +52,21 @@ export default function SearchForm({
   return (
     <Box sx={{ flexGrow: 1, my: 2 }}>
       <Grid container spacing={2}>
-        <Grid xs={6}>
+        <Grid xs={4}>Filter Samples</Grid>
+        <Grid xs={4}>
+          <Button
+            variant="outlined"
+            size="small"
+            //color="secondary"
+            sx={{ float: "right" }}
+            startIcon={<ClearIcon />}
+          >
+            Clear
+          </Button>
+        </Grid>
+        <Grid xs={4}></Grid>
+
+        <Grid xs={4}>
           <Box>
             <FormControl fullWidth>
               <InputLabel id="cruise-label">Cruise</InputLabel>
@@ -73,7 +89,7 @@ export default function SearchForm({
             </FormControl>
           </Box>
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={4}>
           <Box>
             <FormControl fullWidth>
               <InputLabel id="lithologies-label">Primary Lithology</InputLabel>
@@ -96,7 +112,9 @@ export default function SearchForm({
             </FormControl>
           </Box>
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={4}></Grid>
+
+        <Grid xs={4}>
           <Box>
             <FormControl fullWidth>
               <InputLabel id="dredge-label">Dredge Number</InputLabel>
@@ -111,14 +129,14 @@ export default function SearchForm({
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value="1">1</MenuItem>
-                <MenuItem value="2">2</MenuItem>
-                <MenuItem value="3">3</MenuItem>
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2}>2</MenuItem>
+                <MenuItem value={3}>3</MenuItem>
               </Select>
             </FormControl>
           </Box>
         </Grid>
-        <Grid xs={6}>
+        <Grid xs={4}>
           <Box>
             <FormControl fullWidth>
               <InputLabel id="textures-label">Textures</InputLabel>
@@ -140,6 +158,15 @@ export default function SearchForm({
               </Select>
             </FormControl>
           </Box>
+        </Grid>
+        <Grid xs={4} direction="column" justifyContent={"space-between"}>
+          <Button
+            variant="outlined"
+            startIcon={<DownloadIcon />}
+            sx={{ mt: 3, float: "right" }}
+          >
+            Download CSV
+          </Button>
         </Grid>
       </Grid>
     </Box>

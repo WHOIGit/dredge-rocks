@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
-import { DataGrid } from "@mui/x-data-grid";
+import { DataGrid, GridColumnMenu } from "@mui/x-data-grid";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import useSamples from "../hooks/useSamples";
 import SearchForm from "./SearchForm";
@@ -27,9 +27,9 @@ export default function SamplesDataGrid() {
       valueGetter: (params) =>
         `${params.row.sample_number || ""} ${params.row.sub_sample || ""}`,
     },
-    { field: "primary_lithology", headerName: "Primary Lithology", flex: 0.75 },
+    { field: "primary_lithology", headerName: "Primary Lithology", flex: 1 },
     { field: "av_grain_size", headerName: "Ave. Grain Size", flex: 0.75 },
-    { field: "texture", headerName: "Texture", flex: 0.75 },
+    { field: "texture", headerName: "Texture", flex: 1 },
     { field: "contact", headerName: "Contact", flex: 0.75 },
     { field: "glass", headerName: "Glass (mm)", flex: 0.75 },
     { field: "palag", headerName: "Palag. (mm)", flex: 0.75 },
@@ -45,7 +45,7 @@ export default function SamplesDataGrid() {
               height: 75,
               width: 100,
             }}
-            src={row.sample_photo.thumbnail}
+            src={row.sample_photo?.thumbnail}
           />
         );
       },
@@ -110,12 +110,23 @@ export default function SamplesDataGrid() {
     }
   }, [data, cruise, lithology, dredge, texture]);
 
+  function CustomColumnMenu(props) {
+    return (
+      <GridColumnMenu
+        {...props}
+        slots={{
+          // Hide `columnMenuFilterItem`
+          columnMenuFilterItem: null,
+        }}
+      />
+    );
+  }
+
   if (isLoading || isError || !data || !rows) return null;
 
   return (
     <>
-      <Typography variant="body1">Filter Samples</Typography>
-      <Box sx={{ width: "66%" }}>
+      <Box sx={{ width: "100%" }}>
         <SearchForm
           cruise={cruise}
           setCruise={setCruise}
@@ -132,10 +143,11 @@ export default function SamplesDataGrid() {
           rows={rows}
           columns={columns}
           rowHeight={75}
+          slots={{ columnMenu: CustomColumnMenu }}
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 20,
+                pageSize: 100,
               },
             },
           }}

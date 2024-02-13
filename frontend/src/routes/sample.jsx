@@ -14,12 +14,13 @@ export default function Sample() {
       <Box sx={{ p: 2 }}>
         <Typography variant="h4" gutterBottom>
           Sample {data?.sample_number}
-          {data?.sub_sample}
+          {data?.sub_sample} - Cruise {data?.ship} {data?.cruise}, Leg{" "}
+          {data?.leg}, Dredge {data?.dredge}
         </Typography>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid xs={4}>
-              <img src={data?.sample_photo.file} width="100%" />
+              <img src={data?.sample_photo?.file} width="100%" />
               <Box>
                 <Button
                   variant="outlined"

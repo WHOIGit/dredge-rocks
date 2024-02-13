@@ -40,13 +40,10 @@ export default function Layout() {
 
           <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             <Link color="#fff" sx={{ textDecoration: "none" }} href="/">
-              Dredge Core Rocks
+              Dredge Rocks
             </Link>
           </Typography>
           <nav>
-            <Link variant="button" color="#fff" href="/" sx={navLinkSX}>
-              Map
-            </Link>
             <Link variant="button" color="#fff" href="/about" sx={navLinkSX}>
               About
             </Link>

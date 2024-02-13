@@ -14,7 +14,7 @@ class Cruise(models.Model):
 
 
 class Leg(models.Model):
-    leg_number = models.CharField(max_length=100)
+    leg_number = models.IntegerField()
     cruise = models.ForeignKey(
         Cruise,
         related_name="legs",
@@ -29,7 +29,7 @@ class Leg(models.Model):
 
 
 class Dredge(models.Model):
-    dredge_number = models.CharField(max_length=100)
+    dredge_number = models.IntegerField()
     leg = models.ForeignKey(
         Leg,
         related_name="dredges",
@@ -58,7 +58,7 @@ class SamplePhoto(models.Model):
 
 
 class Sample(models.Model):
-    sample_number = models.CharField(max_length=100)
+    sample_number = models.IntegerField()
     sub_sample = models.CharField(max_length=100, blank=True)
     dredge = models.ForeignKey(
         Dredge,
