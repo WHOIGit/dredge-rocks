@@ -50,7 +50,7 @@ class SampleSerializer(serializers.ModelSerializer):
             "primary_lithology",
             "av_grain_size",
             "texture",
-            "contact",
+            "weight",
             "glass",
             "palag",
             "comments",

@@ -30,7 +30,7 @@ export default function SamplesDataGrid() {
     { field: "primary_lithology", headerName: "Primary Lithology", flex: 1 },
     { field: "av_grain_size", headerName: "Ave. Grain Size", flex: 0.75 },
     { field: "texture", headerName: "Texture", flex: 1 },
-    { field: "contact", headerName: "Contact", flex: 0.75 },
+    { field: "weight", headerName: "Weight", flex: 0.75 },
     { field: "glass", headerName: "Glass (mm)", flex: 0.75 },
     { field: "palag", headerName: "Palag. (mm)", flex: 0.75 },
     {

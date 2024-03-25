@@ -68,7 +68,7 @@ class Sample(models.Model):
     primary_lithology = models.CharField(max_length=100, blank=True)
     av_grain_size = models.CharField(max_length=100, blank=True)
     texture = models.CharField(max_length=100, blank=True)
-    contact = models.CharField(max_length=100, blank=True)
+    weight = models.CharField(max_length=100, blank=True)
     glass = models.CharField(max_length=100, blank=True)
     palag = models.CharField(max_length=100, blank=True)
     comments = models.CharField(max_length=100, blank=True)
